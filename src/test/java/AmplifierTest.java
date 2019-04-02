@@ -10,13 +10,28 @@ public class AmplifierTest {
 
     @Before
     public void setup() {
-        amplifier = new Amplifier();
+        amplifier = new Amplifier("Technics","T2000","Off");
     }
 
     @Test
     public void changeVolumeTest() {
         amplifier.setVolume(11);
         assertEquals(11, amplifier.getVolume());
+    }
+
+    @Test
+    public void getManufacturerTest(){
+        assertEquals("Technics", amplifier.getManufacturer());
+    }
+
+    @Test
+    public void getModelTest(){
+        assertEquals("T2000", amplifier.getModel());
+    }
+
+    @Test
+    public void getIndicatorTest(){
+        assertEquals("Off",amplifier.getPowerIndicator());
     }
 
 }

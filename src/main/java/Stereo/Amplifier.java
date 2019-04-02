@@ -1,11 +1,11 @@
 package Stereo;
 
-public class Amplifier {
+public class Amplifier extends Component {
 
     private int volume;
 
-    public Amplifier() {
-        this.volume = volume;
+    public Amplifier(String manufacturer, String model, String indicator) {
+        super(manufacturer,model,indicator);
     }
 
     public int getVolume() {
@@ -15,5 +15,7 @@ public class Amplifier {
     public void setVolume(int newVolume) {
         this.volume = newVolume;
     }
+
+
 
 }
